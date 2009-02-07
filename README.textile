@@ -21,6 +21,8 @@ h3. Usage
 
 p. Stick the javascripts in spec/javascripts and put the jsspec.rake file somewhere where it will get loaded. Then just start writing specs and run them with "rake spec:js". When you are done, kill the serve process by running "rake spec:js:kill".
 
+p. I have also found it useful to make a symbolic link to your real javascript files in the assets directory, since serve works off of the spec/javascripts directory and cannot look for js files outside of there. Something like "ln -s ~/path/to/project/public/javascripts spec/javascripts/assets". Then you will be able to require your own javascript files in the specs by doing something like "- javascripts << 'javascripts/real_js_file'".
+
 h3. License
 
 p. Copyright (c) 2009, Steve Iannopollo
