@@ -1,4 +1,6 @@
-js_directory = File.expand_path(File.dirname(__FILE__) + '/spec/javascripts')
+js_directory = nil
+
+raise 'You must define where the javascripts directory lives' if js_directory.nil?
 
 namespace :spec do
   desc 'Runs all the _spec.haml files under the spec/javascripts directory'
