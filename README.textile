@@ -1,0 +1,42 @@
+h1. JSSpec Skeleton
+
+p. I've found that I needed this on several projects, so this is a simple skeleton for getting javascript testing going quickly.
+
+h3. Depedencies
+
+* serve (sudo gem install serve)
+
+h3. Manifest
+
+* *README.textile*: You're looking at it!
+* *jsspec.rake*: Stick this somewhere where it will get loaded and you can run specs using "rake spec:js". When you want to kill the serve process, run "rake spec:js:kill"
+* *javascripts/_layout.haml*: Specs are run using serve, and this is the layout file for the files to be run in.
+* *javascripts/default_spec.haml*: Sample spec file. All spec files to be run must end in "_spec.haml".
+* *javascripts/view_helpers.rb*: Provides some default view helpers (like #javascripts and #javascript_tag).
+* *javascripts/assets directory*: Includes prototype, lowpro, a spec_helper, and all the code for JSSpec.
+* *javascripts/assets/spec_helper.js*: Stick javascript helper methods in your tests here. One is already provided (Element.fireNative). You can use it like $('some_div').fireNative('click') to work around prototypes broken Event.fire.
+* *javascripts/ajax directory*: Contains some files if you wish to test Ajax calls. One with no response, and the other with text that will show up in the Ajax response.
+
+h3. Usage
+
+p. Stick the javascripts in spec/javascripts and put the jsspec.rake file somewhere where it will get loaded. Then just start writing specs and run them with "rake spec:js". When you are done, kill the serve process by running "rake spec:js:kill".
+
+h3. License
+
+p{font-size:60%}. Copyright (c) 2009, Steve Iannopollo
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+

@@ -1,0 +1,16 @@
+- javascripts << 'some js file'
+
+%div#tested_div
+
+:javascript
+  describe('JS Spec', {
+    'before': function() {with(self){
+    }},
+    
+    'after': function() {with(self){
+    }},
+    
+    "should do something": function() {with(self){
+      expect(1).should_be(1);
+    }}
+  });
